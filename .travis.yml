@@ -1,12 +1,13 @@
 language: ruby
 rvm:
-  - 2.6.0
+  - 2.6.3
 
 before_script:
-  - chmod +x _bin/html-validate.sh
   - chmod +x _bin/build.sh
 
 script:
+  - bundle exec jekyll --version
+  - gem install jekyll
   - _bin/build.sh
 
 env:
